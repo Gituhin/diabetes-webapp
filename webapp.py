@@ -8,7 +8,7 @@ st.write("""
 To predict is a person as diabetes using python
 """)
 #loading the model and segregating
-data=pd.read_csv("D:\Programming\Webapp\pima-indians-diabetes.csv")
+data=pd.read_csv("pima-indians-diabetes.csv")
 st.subheader('Data Information:')
 st.dataframe(data)
 st.subheader("Data Description")
@@ -34,7 +34,7 @@ ui=get_input()
 st.subheader('User Input')
 st.write(ui)
 
-model=pickle.load(open('D:\Programming\Webapp\web_model', 'rb'))
+model=pickle.load(open('web_model', 'rb'))
 result='Diabetic' if model.predict(ui)==1 else 'Non-Diabetic'
 
 st.subheader("Prediction:")
